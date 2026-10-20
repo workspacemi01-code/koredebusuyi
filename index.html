@@ -7,8 +7,8 @@
 <title>Korede Busuyi — Senior Product Manager</title>
 <meta name="description" content="Senior Product Manager and Technical Product Manager building commerce, SaaS, logistics and payments — Obana.Africa and Thaja in Lagos, earlier product work with teams in the United States and Europe.">
 <meta name="author" content="Korede Oluwabusuyi Joshua">
-<meta name="theme-color" content="#E7E7E3" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#121314" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#DFE3E3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#11181A" media="(prefers-color-scheme: dark)">
 
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Korede Busuyi — Senior Product Manager">
@@ -18,11 +18,11 @@
 <meta name="twitter:title" content="Korede Busuyi — Senior Product Manager">
 <meta name="twitter:image" content="portrait.jpg">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23121314'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' fill='%23E7E7E3' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230D4F5C'/%3E%3Ctext x='16' y='23' font-family='Helvetica,Arial,sans-serif' font-size='19' fill='%23F4F7F6' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,600&family=Public+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Libre+Franklin:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,600&display=swap">
 
 <script type="application/ld+json">
 {
@@ -45,17 +45,17 @@
 /* Record-card system: a mono rail of facts beside the account, oxblood as the
    only colour, Fraunces carrying the voice. Views switch on the hash. */
 :root {
-    --paper: #E7E7E3;
-    --raised: #F2F2EF;
-    --ink: #121314;
-    --soft: #5A5C5C;
-    --rule: #CBCAC4;
-    --mark: #8C2F39;
-    --mark-ink: #FFFFFF;
+    --paper: #DFE3E3;
+    --raised: #EDEFEE;
+    --ink: #14191B;
+    --soft: #55605F;
+    --rule: #BFC6C5;
+    --mark: #0D4F5C;
+    --mark-ink: #F4F7F6;
 
-    --display: 'Fraunces', Georgia, 'Times New Roman', serif;
-    --text: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    --mono: 'DM Mono', ui-monospace, Menlo, monospace;
+    --display: 'Libre Franklin', 'Helvetica Neue', Arial, sans-serif;
+    --text: 'Newsreader', Georgia, 'Times New Roman', serif;
+    --mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
 
     --page: 68rem;
     color-scheme: light;
@@ -63,13 +63,13 @@
 
 @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-        --paper: #121314; --raised: #1A1B1C; --ink: #E8E7E2; --soft: #9A9B99;
-        --rule: #2C2E2F; --mark: #D4757F; --mark-ink: #121314; color-scheme: dark;
+        --paper: #11181A; --raised: #1A2225; --ink: #E2E8E7; --soft: #93A0A0;
+        --rule: #273134; --mark: #6FC6D6; --mark-ink: #0A1113; color-scheme: dark;
     }
 }
 :root[data-theme="dark"] {
-    --paper: #121314; --raised: #1A1B1C; --ink: #E8E7E2; --soft: #9A9B99;
-    --rule: #2C2E2F; --mark: #D4757F; --mark-ink: #121314; color-scheme: dark;
+    --paper: #11181A; --raised: #1A2225; --ink: #E2E8E7; --soft: #93A0A0;
+    --rule: #273134; --mark: #6FC6D6; --mark-ink: #0A1113; color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -78,7 +78,8 @@ html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 
 body {
     margin: 0; background: var(--paper); color: var(--ink);
-    font-family: var(--text); font-size: 1rem; line-height: 1.62;
+    font-family: var(--text); font-size: 1.0625rem; line-height: 1.6;
+    font-optical-sizing: auto;
     -webkit-font-smoothing: antialiased; font-synthesis-weight: none;
     display: flex; flex-direction: column; min-height: 100%;
 }
@@ -91,14 +92,19 @@ img { max-width: 100%; height: auto; display: block; }
 @media (min-width: 50rem) { .page { padding-inline: 2.5rem; } }
 
 h1, h2, h3 {
-    font-family: var(--display); font-variation-settings: 'opsz' 110;
-    font-weight: 600; letter-spacing: -0.022em; line-height: 1.04;
+    font-family: var(--display);
+    font-weight: 700; letter-spacing: -0.025em; line-height: 1.03;
     text-wrap: balance; margin: 0;
 }
-h1 { font-size: clamp(2.5rem, 7.5vw, 5rem); letter-spacing: -0.034em; }
-h2 { font-size: clamp(1.875rem, 4.4vw, 3rem); }
-h3 { font-size: clamp(1.25rem, 2.3vw, 1.625rem); letter-spacing: -0.018em; }
-h1 em, h2 em { font-style: italic; font-variation-settings: 'opsz' 144; color: var(--mark); }
+h1 { font-size: clamp(2.5rem, 7.5vw, 5rem); font-weight: 800; letter-spacing: -0.035em; }
+h2 { font-size: clamp(1.875rem, 4.4vw, 3rem); font-weight: 800; letter-spacing: -0.03em; }
+h3 { font-size: clamp(1.25rem, 2.3vw, 1.625rem); letter-spacing: -0.015em; }
+/* The accent phrase answers the masthead in the reading face, italic — the
+   contrast is the point, so it is not just the same type in another colour. */
+h1 em, h2 em {
+    font-family: var(--text); font-style: italic; font-weight: 600;
+    letter-spacing: -0.015em; color: var(--mark);
+}
 
 p { margin: 0 0 1.05em; max-width: 34rem; }
 p:last-child { margin-bottom: 0; }
@@ -111,7 +117,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--mark); outline-
 /* ── nav ────────────────────────────────────────────────────────── */
 .bar { border-bottom: 1px solid var(--rule); position: sticky; top: env(safe-area-inset-top, 0px); z-index: 40; background: color-mix(in srgb, var(--paper) 94%, transparent); backdrop-filter: blur(10px); }
 .bar-in { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; padding-block: 0.8rem; }
-.sig { font-family: var(--display); font-variation-settings: 'opsz' 24; font-weight: 600; font-size: 0.9375rem; letter-spacing: -0.02em; text-decoration: none; white-space: nowrap; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.sig { font-family: var(--display); font-weight: 600; font-size: 0.9375rem; letter-spacing: -0.02em; text-decoration: none; white-space: nowrap; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
 @media (min-width: 26rem) { .sig { font-size: 1.0625rem; } }
 .bar nav { display: flex; gap: 0.35rem; align-items: center; }
 .bar nav a {
@@ -122,11 +128,43 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--mark); outline-
 .bar nav a:hover { color: var(--ink); }
 .bar nav a[aria-current="page"] { color: var(--ink); border-color: var(--rule); }
 .bar nav a.cta { color: var(--mark-ink); background: var(--mark); border-color: var(--mark); }
-.hide-sm, .hide-md { display: none; }
-@media (min-width: 34rem) { .hide-sm { display: inline-block; } }
-@media (min-width: 48rem) { .hide-md { display: inline-block; } }
 .flip { font-family: var(--mono); font-size: 0.625rem; letter-spacing: 0.1em; text-transform: uppercase; background: none; border: 1px solid var(--rule); color: var(--soft); padding: 0.4rem 0.5rem; cursor: pointer; }
 .flip:hover { color: var(--ink); }
+
+/* Below 48rem the bar has room for one link, so everything else lives in a
+   panel. Every page and every role is reachable from a phone. */
+.wide { display: none; }
+.menu-btn {
+    font-family: var(--mono); font-size: 0.6875rem; letter-spacing: 0.09em;
+    text-transform: uppercase; color: var(--soft); background: none;
+    border: 1px solid var(--rule); padding: 0.4rem 0.6rem; cursor: pointer;
+}
+.menu-btn[aria-expanded="true"] { color: var(--mark-ink); background: var(--ink); border-color: var(--ink); }
+.menu { border-top: 1px solid var(--rule); background: var(--raised); max-height: 70vh; overflow-y: auto; }
+.menu[hidden] { display: none; }
+.menu-in { padding-block: 0.5rem 1.25rem; }
+.menu-k {
+    font-family: var(--mono); font-size: 0.625rem; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--soft);
+    margin: 1rem 0 0.25rem; padding-bottom: 0.5rem; max-width: none;
+    border-bottom: 1px solid var(--rule);
+}
+.menu a {
+    display: flex; align-items: center; justify-content: space-between;
+    text-decoration: none; color: var(--ink); font-size: 1rem;
+    padding: 0.8rem 0; border-bottom: 1px solid var(--rule);
+}
+.menu a::after { content: '→'; color: var(--soft); font-family: var(--mono); font-size: 0.8125rem; }
+.menu a[aria-current="page"] { color: var(--mark); }
+.menu-flip {
+    margin-top: 1.25rem; font-family: var(--mono); font-size: 0.6875rem;
+    letter-spacing: 0.09em; text-transform: uppercase; color: var(--soft);
+    background: none; border: 1px solid var(--rule); padding: 0.6rem 0.8rem; cursor: pointer;
+}
+@media (min-width: 48rem) {
+    .wide { display: inline-block; }
+    .menu-btn, .menu { display: none !important; }
+}
 
 /* ── views ──────────────────────────────────────────────────────── */
 main { flex: 1; }
@@ -150,7 +188,7 @@ main { flex: 1; }
 .hero .stand { font-size: clamp(1rem, 1.7vw, 1.125rem); color: var(--soft); max-width: 34rem; }
 .hero-text { display: flex; flex-direction: column; }
 .hero-name {
-    font-family: var(--display); font-variation-settings: 'opsz' 40;
+    font-family: var(--display);
     font-weight: 600; font-size: 1rem; letter-spacing: -0.012em;
     margin: 0 0 0.15rem;
 }
@@ -174,20 +212,19 @@ main { flex: 1; }
 .hero-surf li { display: flex; align-items: center; gap: 0.9rem; }
 .hero-surf li + li::before { content: ''; width: 3px; height: 3px; background: var(--mark); flex: none; }
 
-.hero figure { margin: 0; border: 1px solid var(--rule); max-width: 11rem; }
+.hero figure { margin: 0; border: 1px solid var(--rule); }
 .hero figure figcaption {
     font-family: var(--mono); font-size: 0.5625rem; letter-spacing: 0.12em;
     text-transform: uppercase; color: var(--soft);
     padding: 0.4rem 0.55rem; border-top: 1px solid var(--rule); text-align: center;
 }
-@media (min-width: 40rem) { .hero figure { max-width: none; } }
 /* No forced ratio and no crop: the photographs keep their own proportions. */
 .hero figure img { width: 100%; }
 
 .figs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; margin-top: 2.5rem; border-top: 1px solid var(--ink); }
 @media (min-width: 52rem) { .figs { grid-template-columns: repeat(4, 1fr); } }
 .figs div { padding: 1.1rem 1rem 1.1rem 0; border-bottom: 1px solid var(--rule); }
-.figs b { display: block; font-family: var(--display); font-variation-settings: 'opsz' 144; font-weight: 700; font-size: clamp(1.625rem, 3.2vw, 2.25rem); line-height: 1; letter-spacing: -0.035em; font-variant-numeric: tabular-nums; }
+.figs b { display: block; font-family: var(--display); font-weight: 700; font-size: clamp(1.625rem, 3.2vw, 2.25rem); line-height: 1; letter-spacing: -0.035em; font-variant-numeric: tabular-nums; }
 .figs small { display: block; margin-top: 0.3rem; font-size: 0.75rem; color: var(--soft); }
 
 /* work index — the thing you click */
@@ -203,7 +240,7 @@ main { flex: 1; }
 .row:hover .row-go { color: var(--mark); transform: translateX(3px); }
 .row-no { font-family: var(--mono); font-size: 0.6875rem; color: var(--soft); }
 .row-main { min-width: 0; }
-.row-name { display: block; font-family: var(--display); font-variation-settings: 'opsz' 40; font-weight: 600; font-size: 1.0625rem; letter-spacing: -0.015em; line-height: 1.25; }
+.row-name { display: block; font-family: var(--display); font-weight: 600; font-size: 1.0625rem; letter-spacing: -0.015em; line-height: 1.25; }
 .row-sub { display: block; font-size: 0.8125rem; color: var(--soft); margin-top: 0.15rem; }
 .row-end { display: flex; align-items: center; gap: 0.9rem; }
 .row-focus { display: none; font-family: var(--mono); font-size: 0.6875rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--soft); text-align: right; }
@@ -218,7 +255,7 @@ main { flex: 1; }
 .area:hover { background: var(--raised); }
 .area:hover .area-t { color: var(--mark); }
 .area-k { display: block; font-family: var(--mono); font-size: 0.625rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mark); margin-bottom: 0.4rem; }
-.area-t { display: block; font-family: var(--display); font-variation-settings: 'opsz' 40; font-weight: 600; font-size: 1.125rem; letter-spacing: -0.015em; margin-bottom: 0.3rem; }
+.area-t { display: block; font-family: var(--display); font-weight: 600; font-size: 1.125rem; letter-spacing: -0.015em; margin-bottom: 0.3rem; }
 .area-d { display: block; font-size: 0.875rem; color: var(--soft); max-width: 24rem; }
 
 .closer { margin-top: 3rem; padding-top: 1.75rem; border-top: 1px solid var(--ink); display: grid; gap: 1.5rem; }
@@ -249,7 +286,7 @@ main { flex: 1; }
 
 .result { margin-top: 2rem; border-top: 1px solid var(--rule); padding-top: 1.25rem; display: grid; gap: 1rem; }
 @media (min-width: 40rem) { .result { grid-template-columns: auto 1fr; gap: 2.25rem; align-items: start; } }
-.result-fig { font-family: var(--display); font-variation-settings: 'opsz' 144; font-weight: 700; font-size: clamp(2.5rem, 6vw, 3.75rem); line-height: 0.9; letter-spacing: -0.04em; color: var(--mark); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.result-fig { font-family: var(--display); font-weight: 700; font-size: clamp(2.5rem, 6vw, 3.75rem); line-height: 0.9; letter-spacing: -0.04em; color: var(--mark); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .result ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 0.35rem; }
 .result li { font-size: 0.9375rem; max-width: 32rem; }
 .result li em { font-style: normal; font-family: var(--mono); font-size: 0.8125rem; color: var(--mark); margin-right: 0.4rem; }
@@ -298,22 +335,19 @@ figure.plate figcaption { font-family: var(--mono); font-size: 0.625rem; letter-
 /* ── about / practice ───────────────────────────────────────────── */
 .two { display: grid; gap: 2rem; }
 .two > * { min-width: 0; }
-.two figure.plate { max-width: 14rem; }
-@media (min-width: 44rem) { .two { grid-template-columns: 1fr 12rem; gap: 2.25rem; } .two figure.plate { max-width: none; } }
+.two figure.plate { margin: 0; }
+@media (min-width: 44rem) { .two { grid-template-columns: 1fr 12rem; gap: 2.25rem; } }
 @media (min-width: 60rem) { .two { grid-template-columns: 1fr 15rem; gap: 3.5rem; } }
 /* About reads as a newspaper page: a lede set against the portrait, then the
    body across the full width in two columns with a rule between them. */
 .about-top { display: grid; gap: 1.75rem; align-items: start; }
 .about-top > * { min-width: 0; }
-.about-top figure.plate { margin: 0; max-width: 13rem; }
-@media (min-width: 44rem) {
-    .about-top { grid-template-columns: 1fr 12rem; gap: 2.25rem; }
-    .about-top figure.plate { max-width: none; }
-}
+.about-top figure.plate { margin: 0; }
+@media (min-width: 44rem) { .about-top { grid-template-columns: 1fr 12rem; gap: 2.25rem; } }
 @media (min-width: 60rem) { .about-top { grid-template-columns: 1fr 15rem; gap: 3.5rem; } }
 .about-lede p { max-width: none; }
 .about-lede p:first-child {
-    font-family: var(--display); font-variation-settings: 'opsz' 40;
+    font-family: var(--display);
     font-size: clamp(1.0625rem, 1.9vw, 1.375rem); line-height: 1.4;
     letter-spacing: -0.012em; color: var(--ink);
 }
@@ -366,13 +400,32 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
     <div class="page bar-in">
         <a class="sig" href="#/">Korede Busuyi</a>
         <nav id="nav">
-            <a href="#/record" data-v="record">Record</a>
-            <a href="#/calls" data-v="calls" class="hide-sm">Calls</a>
-            <a href="#/practice" data-v="practice" class="hide-sm">Practice</a>
-            <a href="#/about" data-v="about" class="hide-md">About</a>
+            <a href="#/record" data-v="record" class="wide">Record</a>
+            <a href="#/calls" data-v="calls" class="wide">Calls</a>
+            <a href="#/practice" data-v="practice" class="wide">Practice</a>
+            <a href="#/about" data-v="about" class="wide">About</a>
             <a href="#/contact" data-v="contact" class="cta">Contact</a>
-            <button class="flip" id="flip" type="button" aria-label="Switch colour theme">◐</button>
+            <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+            <button class="flip wide" id="flip" type="button" aria-label="Switch colour theme">◐</button>
         </nav>
+    </div>
+    <div class="menu" id="menu" hidden>
+        <div class="page menu-in">
+            <p class="menu-k">Pages</p>
+            <a href="#/record">The record</a>
+            <a href="#/about">About</a>
+            <a href="#/calls">Calls</a>
+            <a href="#/practice">Practice</a>
+            <a href="#/contact">Contact</a>
+            <p class="menu-k">The work</p>
+            <a href="#/obana">Obana.Africa</a>
+            <a href="#/thaja">Thaja</a>
+            <a href="#/fazsion">Fazsion Wholesale</a>
+            <a href="#/iotech">Iotech Extra</a>
+            <a href="#/bizinc">Bizinc</a>
+            <a href="#/appcake">AppCake</a>
+            <button class="menu-flip" id="menu-flip" type="button">Switch colour theme</button>
+        </div>
     </div>
 </header>
 
@@ -1181,6 +1234,7 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
 
     var VIEWS = ['home', 'record', 'calls', 'practice', 'about', 'contact'].concat(ROLES.map(function (r) { return r.id; }));
     var links = Array.prototype.slice.call(document.querySelectorAll('#nav a[data-v]'));
+    var menuLinks = Array.prototype.slice.call(document.querySelectorAll('#menu a'));
 
     function show(name) {
         if (VIEWS.indexOf(name) === -1) name = 'home';
@@ -1191,6 +1245,10 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
         var group = (name === 'calls' || name === 'practice' || name === 'about' || name === 'contact') ? name : 'record';
         links.forEach(function (a) {
             if (a.getAttribute('data-v') === group) a.setAttribute('aria-current', 'page');
+            else a.removeAttribute('aria-current');
+        });
+        menuLinks.forEach(function (a) {
+            if (a.getAttribute('href') === '#/' + name) a.setAttribute('aria-current', 'page');
             else a.removeAttribute('aria-current');
         });
         var titles = { home: 'Senior Product Manager', record: 'The record', calls: 'Calls', practice: 'Practice', about: 'About', contact: 'Contact' };
@@ -1204,7 +1262,19 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
         window.scrollTo(0, 0);
     }
 
-    window.addEventListener('hashchange', route);
+    var menu = document.getElementById('menu');
+    var menuBtn = document.getElementById('menu-btn');
+    function setMenu(open) {
+        menu.hidden = !open;
+        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        menuBtn.textContent = open ? 'Close' : 'Menu';
+    }
+    menuBtn.addEventListener('click', function () { setMenu(menu.hidden); });
+    /* Tapping the page you are already on fires no hashchange, so close here too. */
+    menuLinks.forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !menu.hidden) setMenu(false); });
+
+    window.addEventListener('hashchange', function () { setMenu(false); route(); });
     route();
 
     var flip = document.getElementById('flip');
@@ -1217,11 +1287,13 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
         var saved = localStorage.getItem('kb-theme');
         if (saved === 'light' || saved === 'dark') document.documentElement.setAttribute('data-theme', saved);
     } catch (e) { /* storage blocked; the media query still decides */ }
-    flip.addEventListener('click', function () {
+    function switchTheme() {
         var next = theme() === 'dark' ? 'light' : 'dark';
         document.documentElement.setAttribute('data-theme', next);
         try { localStorage.setItem('kb-theme', next); } catch (e) { /* not remembered */ }
-    });
+    }
+    flip.addEventListener('click', switchTheme);
+    document.getElementById('menu-flip').addEventListener('click', switchTheme);
 
     function copier(btn, text, label) {
         btn.addEventListener('click', function () {
