@@ -15,8 +15,8 @@ portrait-formal.jpg  spare portrait, unused
 ```
 
 Navigation is hash-based, so every section has a shareable link:
-`#/record`, `#/obana`, `#/fazsion`, `#/iotech`, `#/bizinc`, `#/appcake`,
-`#/earlier`, `#/calls`, `#/practice`, `#/about`, `#/contact`.
+`#/record`, `#/obana`, `#/thaja`, `#/fazsion`, `#/iotech`, `#/bizinc`,
+`#/appcake`, `#/calls`, `#/practice`, `#/about`, `#/contact`.
 
 Fonts come from Google Fonts. Everything else is inline.
 
@@ -38,8 +38,5 @@ Any static host serves it as-is — no configuration needed.
 
 ## Still to fill in
 
-- `[VERIFY]` markers on TheOutlet.ng and davidwej.com — dates and job titles
 - A downloadable CV
-- **Product screenshots** for the role pages — the biggest remaining gap
-
-Search `Verify` in `index.html` to find the markers.
+- Screenshots of the vendor dashboard and partner wallet (both behind a login)
