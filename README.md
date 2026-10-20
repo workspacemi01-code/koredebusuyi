@@ -7,9 +7,16 @@ Portfolio for **Korede Oluwabusuyi Joshua** — Senior Product Manager & Technic
 One static page. No build step, no dependencies, no framework.
 
 ```
-index.html     the whole site — markup, styles and the small amount of script
-portrait.jpg   hero portrait (839×1000, ~216KB)
+index.html           the whole site — markup, styles, routing
+portrait.jpg         hero portrait
+fazsion-team.jpg     Fazsion working session
+event.jpg            Lagos technology event
+portrait-formal.jpg  spare portrait, unused
 ```
+
+Navigation is hash-based, so every section has a shareable link:
+`#/record`, `#/obana`, `#/fazsion`, `#/iotech`, `#/bizinc`, `#/appcake`,
+`#/earlier`, `#/calls`, `#/practice`, `#/about`, `#/contact`.
 
 Fonts come from Google Fonts. Everything else is inline.
 
@@ -32,8 +39,7 @@ Any static host serves it as-is — no configuration needed.
 ## Still to fill in
 
 - `[VERIFY]` markers on TheOutlet.ng and davidwej.com — dates and job titles
-- LinkedIn and GitHub links in the Contact section
 - A downloadable CV
-- Product screenshots for case studies 01–03
+- **Product screenshots** for the role pages — the biggest remaining gap
 
-Search `VERIFY`, `ADD LINK` and `ADD FILE` in `index.html` to find them.
+Search `Verify` in `index.html` to find the markers.
