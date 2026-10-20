@@ -403,6 +403,14 @@ figure.plate figcaption { font-family: var(--mono); font-size: 0.625rem; letter-
 .pill:hover { border-color: var(--mark); }
 
 footer { border-top: 1px solid var(--rule); margin-top: auto; }
+.foot-nav {
+    display: flex; flex-wrap: wrap; gap: 0.35rem 1.5rem; padding-block: 1.25rem;
+    border-bottom: 1px solid var(--rule);
+    font-family: var(--mono); font-size: 0.6875rem; letter-spacing: 0.09em; text-transform: uppercase;
+}
+.foot-nav a { color: var(--soft); text-decoration: none; }
+.foot-nav a:hover { color: var(--ink); }
+.foot-nav a[aria-current="page"] { color: var(--mark); }
 .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.6rem; padding-block: 1.25rem; font-family: var(--mono); font-size: 0.625rem; letter-spacing: 0.09em; text-transform: uppercase; color: var(--soft); }
 </style>
 </head>
@@ -413,8 +421,6 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
         <a class="sig" href="#/">Korede Busuyi</a>
         <nav id="nav">
             <a href="#/record" data-v="record" class="wide">Record</a>
-            <a href="#/calls" data-v="calls" class="wide">Calls</a>
-            <a href="#/practice" data-v="practice" class="wide">Practice</a>
             <a href="#/about" data-v="about" class="wide">About</a>
             <a href="#/contact" data-v="contact" class="cta">Contact</a>
             <button class="flip" id="flip" type="button" aria-label="Switch colour theme">◐</button>
@@ -1212,9 +1218,20 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
 </main>
 
 <footer>
-    <div class="page foot">
-        <span>Korede Oluwabusuyi Joshua</span>
-        <span>Senior &amp; Technical Product Manager · Lagos &amp; remote</span>
+    <div class="page">
+        <nav class="foot-nav" aria-label="All pages">
+            <a href="#/record">Record</a>
+            <a href="#/about">About</a>
+            <a href="#/calls">Calls</a>
+            <a href="#/practice">Practice</a>
+            <a href="#/contact">Contact</a>
+            <a href="https://www.linkedin.com/in/korede-busuyi/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/Korexszman" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+        <div class="foot">
+            <span>Korede Oluwabusuyi Joshua</span>
+            <span>Senior &amp; Technical Product Manager · Lagos &amp; remote</span>
+        </div>
     </div>
 </footer>
 
@@ -1247,7 +1264,7 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
 
     var VIEWS = ['home', 'record', 'calls', 'practice', 'about', 'contact'].concat(ROLES.map(function (r) { return r.id; }));
     var links = Array.prototype.slice.call(document.querySelectorAll('#nav a[data-v]'));
-    var menuLinks = Array.prototype.slice.call(document.querySelectorAll('#menu a'));
+    var menuLinks = Array.prototype.slice.call(document.querySelectorAll('#menu a, .foot-nav a'));
 
     function show(name) {
         if (VIEWS.indexOf(name) === -1) name = 'home';
