@@ -384,7 +384,8 @@ figure.plate figcaption { font-family: var(--mono); font-size: 0.625rem; letter-
 .skill p { font-size: 0.8125rem; color: var(--soft); margin: 0; }
 
 /* ── contact ────────────────────────────────────────────────────── */
-.ways { display: grid; gap: 0; margin-top: 1.75rem; border-top: 1px solid var(--ink); }
+.way-note { font-size: 0.875rem; color: var(--soft); margin: 0.75rem 0 0; max-width: 32rem; }
+.ways { display: grid; gap: 0; margin-top: 1rem; border-top: 1px solid var(--ink); }
 @media (min-width: 44rem) { .ways { grid-template-columns: repeat(2, 1fr); } }
 .way {
     display: flex; align-items: center; justify-content: space-between; gap: 1rem;
@@ -480,8 +481,8 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
                 </ul>
                 <div class="hero-acts">
                     <a class="act solid" href="#/record">See the record</a>
-                    <a class="act" href="https://wa.me/2347035599433" target="_blank" rel="noopener">WhatsApp</a>
-                    <a class="act" href="mailto:koredebusuyi.career@gmail.com">Email</a>
+                    <a class="act" href="https://wa.me/2347035599433?text=Hi%20Korede%2C%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20talk%20to%20you%20about%20a%20product%20role." target="_blank" rel="noopener">WhatsApp</a>
+                    <a class="act" href="mailto:koredebusuyi.career@gmail.com?subject=Product%20role&body=Hi%20Korede%2C%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20talk%20to%20you%20about%20a%20product%20role.">Email</a>
                 </div>
             </div>
             <figure>
@@ -538,8 +539,12 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
             Open to senior product roles — commerce, marketplaces, SaaS, payments and the
             operational systems underneath them. Remote worldwide, or Lagos-based.
         </p>
+        <p class="way-note">
+            WhatsApp and email open with a short message already written. Edit it
+            before you send — it is only there so you do not start from a blank box.
+        </p>
         <div class="ways">
-            <a class="way" href="https://wa.me/2347035599433" target="_blank" rel="noopener">
+            <a class="way" href="https://wa.me/2347035599433?text=Hi%20Korede%2C%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20talk%20to%20you%20about%20a%20product%20role." target="_blank" rel="noopener">
                 <span><span class="way-k">WhatsApp — fastest</span><span class="way-v">+234 703 559 9433</span></span>
                 <span class="way-go">→</span>
             </a>
@@ -547,7 +552,7 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
                 <span><span class="way-k">Call</span><span class="way-v">+234 703 559 9433</span></span>
                 <span class="way-go">→</span>
             </a>
-            <a class="way" href="mailto:koredebusuyi.career@gmail.com">
+            <a class="way" href="mailto:koredebusuyi.career@gmail.com?subject=Product%20role&body=Hi%20Korede%2C%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20talk%20to%20you%20about%20a%20product%20role.">
                 <span><span class="way-k">Email</span><span class="way-v">koredebusuyi.career@gmail.com</span></span>
                 <span class="way-go">→</span>
             </a>
@@ -645,6 +650,8 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
             </article>
 
         </div>
+
+        <div class="pager"><a href="#/">← Home</a><a href="#/obana">Obana.Africa →</a></div>
     </div>
 </section>
 
@@ -761,7 +768,7 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
                     <figcaption>Sales partner programme — every sale credits a commission to a wallet</figcaption>
                 </figure>
 
-                <div class="pager"><span></span><a href="#/thaja">Thaja →</a></div>
+                <div class="pager"><a href="#/record">← The record</a><a href="#/thaja">Thaja →</a></div>
             </div>
         </div>
     </div>
@@ -1014,7 +1021,7 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
                         <li><em>↑</em>Customer satisfaction by 12 points</li>
                     </ul>
                 </div>
-                <div class="pager"><a href="#/bizinc">← Bizinc</a><a href="#/contact">Get in touch →</a></div>
+                <div class="pager"><a href="#/bizinc">← Bizinc</a><a href="#/calls">Calls →</a></div>
             </div>
         </div>
     </div>
@@ -1096,6 +1103,8 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
                 be protected from it.
             </p>
         </div>
+
+        <div class="pager"><a href="#/practice">← How I work</a><a href="#/contact">Get in touch →</a></div>
     </div>
 </section>
 
@@ -1151,6 +1160,8 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
                     the user's fault.</dd>
             </dl>
         </div>
+
+        <div class="pager"><a href="#/record">← The record</a><a href="#/practice">How I work →</a></div>
     </div>
 </section>
 
@@ -1176,6 +1187,8 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
             reproduce a bug, write a ticket worth picking up, and tell a hard constraint
             from a preference.
         </p>
+
+        <div class="pager"><a href="#/calls">← Calls</a><a href="#/about">About →</a></div>
     </div>
 </section>
 
@@ -1189,8 +1202,12 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
             operational systems underneath them. Remote worldwide, or Lagos-based.
         </p>
 
+        <p class="way-note">
+            WhatsApp and email open with a short message already written. Edit it
+            before you send — it is only there so you do not start from a blank box.
+        </p>
         <div class="ways">
-            <a class="way" href="https://wa.me/2347035599433" target="_blank" rel="noopener">
+            <a class="way" href="https://wa.me/2347035599433?text=Hi%20Korede%2C%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20talk%20to%20you%20about%20a%20product%20role." target="_blank" rel="noopener">
                 <span><span class="way-k">WhatsApp — fastest</span><span class="way-v">+234 703 559 9433</span></span>
                 <span class="way-go">→</span>
             </a>
@@ -1198,7 +1215,7 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
                 <span><span class="way-k">Call</span><span class="way-v">+234 703 559 9433</span></span>
                 <span class="way-go">→</span>
             </a>
-            <a class="way" href="mailto:koredebusuyi.career@gmail.com">
+            <a class="way" href="mailto:koredebusuyi.career@gmail.com?subject=Product%20role&body=Hi%20Korede%2C%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20talk%20to%20you%20about%20a%20product%20role.">
                 <span><span class="way-k">Email</span><span class="way-v" id="mail">koredebusuyi.career@gmail.com</span></span>
                 <span class="way-go">→</span>
             </a>
@@ -1219,6 +1236,8 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
             <button class="pill solid" id="copy-mail" type="button">Copy email</button>
             <button class="pill" id="copy-tel" type="button">Copy phone</button>
         </div>
+
+        <div class="pager"><a href="#/about">← About</a><a href="#/">Home →</a></div>
     </div>
 </section>
 
