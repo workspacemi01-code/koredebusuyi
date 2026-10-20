@@ -160,6 +160,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--mark); outline-
 .menu { border-top: 1px solid var(--rule); background: var(--raised); max-height: 70vh; overflow-y: auto; }
 .menu[hidden] { display: none; }
 .menu-in { padding-block: 0.5rem 1.25rem; }
+.menu-col > .menu-k:first-child { margin-top: 1rem; }
 .menu-k {
     font-family: var(--mono); font-size: 0.625rem; letter-spacing: 0.12em;
     text-transform: uppercase; color: var(--soft);
@@ -421,6 +422,8 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
         <a class="sig" href="#/">Korede Busuyi</a>
         <nav id="nav">
             <a href="#/record" data-v="record" class="wide">Record</a>
+            <a href="#/calls" data-v="calls" class="wide">Calls</a>
+            <a href="#/practice" data-v="practice" class="wide">Practice</a>
             <a href="#/about" data-v="about" class="wide">About</a>
             <a href="#/contact" data-v="contact" class="cta">Contact</a>
             <button class="flip" id="flip" type="button" aria-label="Switch colour theme">◐</button>
@@ -431,19 +434,23 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
     </div>
     <div class="menu" id="menu" hidden>
         <div class="page menu-in">
-            <p class="menu-k">Pages</p>
-            <a href="#/record">The record</a>
-            <a href="#/about">About</a>
-            <a href="#/calls">Calls</a>
-            <a href="#/practice">Practice</a>
-            <a href="#/contact">Contact</a>
-            <p class="menu-k">The work</p>
-            <a href="#/obana">Obana.Africa</a>
-            <a href="#/thaja">Thaja</a>
-            <a href="#/fazsion">Fazsion Wholesale</a>
-            <a href="#/iotech">Iotech Extra</a>
-            <a href="#/bizinc">Bizinc</a>
-            <a href="#/appcake">AppCake</a>
+            <div class="menu-col">
+                <p class="menu-k">Pages</p>
+                <a href="#/record">The record</a>
+                <a href="#/about">About</a>
+                <a href="#/calls">Calls</a>
+                <a href="#/practice">Practice</a>
+                <a href="#/contact">Contact</a>
+            </div>
+            <div class="menu-col">
+                <p class="menu-k">The work</p>
+                <a href="#/obana">Obana.Africa</a>
+                <a href="#/thaja">Thaja</a>
+                <a href="#/fazsion">Fazsion Wholesale</a>
+                <a href="#/iotech">Iotech Extra</a>
+                <a href="#/bizinc">Bizinc</a>
+                <a href="#/appcake">AppCake</a>
+            </div>
         </div>
     </div>
 </header>
