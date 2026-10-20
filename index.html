@@ -128,18 +128,35 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--mark); outline-
 .bar nav a:hover { color: var(--ink); }
 .bar nav a[aria-current="page"] { color: var(--ink); border-color: var(--rule); }
 .bar nav a.cta { color: var(--mark-ink); background: var(--mark); border-color: var(--mark); }
-.flip { font-family: var(--mono); font-size: 0.625rem; letter-spacing: 0.1em; text-transform: uppercase; background: none; border: 1px solid var(--rule); color: var(--soft); padding: 0.4rem 0.5rem; cursor: pointer; }
+.flip {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 2.25rem; height: 2.25rem; padding: 0; cursor: pointer;
+    font-size: 0.8125rem; line-height: 1;
+    background: none; border: 1px solid var(--rule); color: var(--soft);
+}
 .flip:hover { color: var(--ink); }
 
 /* Below 48rem the bar has room for one link, so everything else lives in a
    panel. Every page and every role is reachable from a phone. */
 .wide { display: none; }
 .menu-btn {
-    font-family: var(--mono); font-size: 0.6875rem; letter-spacing: 0.09em;
-    text-transform: uppercase; color: var(--soft); background: none;
-    border: 1px solid var(--rule); padding: 0.4rem 0.6rem; cursor: pointer;
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 2.25rem; height: 2.25rem; padding: 0; cursor: pointer;
+    color: var(--ink); background: none; border: 1px solid var(--rule);
 }
 .menu-btn[aria-expanded="true"] { color: var(--mark-ink); background: var(--ink); border-color: var(--ink); }
+/* Three rules that fold into a cross. */
+.bars { display: block; width: 1rem; height: 0.625rem; position: relative; }
+.bars i {
+    position: absolute; left: 0; width: 100%; height: 1.5px;
+    background: currentColor; transition: transform 0.18s ease, opacity 0.12s ease;
+}
+.bars i:nth-child(1) { top: 0; }
+.bars i:nth-child(2) { top: calc(50% - 0.75px); }
+.bars i:nth-child(3) { bottom: 0; }
+.menu-btn[aria-expanded="true"] .bars i:nth-child(1) { transform: translateY(0.3125rem) rotate(45deg); }
+.menu-btn[aria-expanded="true"] .bars i:nth-child(2) { opacity: 0; }
+.menu-btn[aria-expanded="true"] .bars i:nth-child(3) { transform: translateY(-0.3125rem) rotate(-45deg); }
 .menu { border-top: 1px solid var(--rule); background: var(--raised); max-height: 70vh; overflow-y: auto; }
 .menu[hidden] { display: none; }
 .menu-in { padding-block: 0.5rem 1.25rem; }
@@ -156,11 +173,6 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--mark); outline-
 }
 .menu a::after { content: '→'; color: var(--soft); font-family: var(--mono); font-size: 0.8125rem; }
 .menu a[aria-current="page"] { color: var(--mark); }
-.menu-flip {
-    margin-top: 1.25rem; font-family: var(--mono); font-size: 0.6875rem;
-    letter-spacing: 0.09em; text-transform: uppercase; color: var(--soft);
-    background: none; border: 1px solid var(--rule); padding: 0.6rem 0.8rem; cursor: pointer;
-}
 @media (min-width: 48rem) {
     .wide { display: inline-block; }
     .menu-btn, .menu { display: none !important; }
@@ -405,8 +417,10 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
             <a href="#/practice" data-v="practice" class="wide">Practice</a>
             <a href="#/about" data-v="about" class="wide">About</a>
             <a href="#/contact" data-v="contact" class="cta">Contact</a>
-            <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
-            <button class="flip wide" id="flip" type="button" aria-label="Switch colour theme">◐</button>
+            <button class="flip" id="flip" type="button" aria-label="Switch colour theme">◐</button>
+            <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open the menu">
+                <span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+            </button>
         </nav>
     </div>
     <div class="menu" id="menu" hidden>
@@ -424,7 +438,6 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
             <a href="#/iotech">Iotech Extra</a>
             <a href="#/bizinc">Bizinc</a>
             <a href="#/appcake">AppCake</a>
-            <button class="menu-flip" id="menu-flip" type="button">Switch colour theme</button>
         </div>
     </div>
 </header>
@@ -1267,7 +1280,7 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
     function setMenu(open) {
         menu.hidden = !open;
         menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-        menuBtn.textContent = open ? 'Close' : 'Menu';
+        menuBtn.setAttribute('aria-label', open ? 'Close the menu' : 'Open the menu');
     }
     menuBtn.addEventListener('click', function () { setMenu(menu.hidden); });
     /* Tapping the page you are already on fires no hashchange, so close here too. */
@@ -1293,7 +1306,6 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
         try { localStorage.setItem('kb-theme', next); } catch (e) { /* not remembered */ }
     }
     flip.addEventListener('click', switchTheme);
-    document.getElementById('menu-flip').addEventListener('click', switchTheme);
 
     function copier(btn, text, label) {
         btn.addEventListener('click', function () {
