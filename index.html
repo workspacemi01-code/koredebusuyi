@@ -216,6 +216,7 @@ section:first-of-type { border-top: 0; }
 .sec { padding-block: clamp(3.5rem, 8vw, 6.5rem); }
 
 /* ── hero ───────────────────────────────────────────────────────── */
+.hero > * { min-width: 0; }
 .hero { display: grid; gap: 2.5rem; align-items: end; padding-block: clamp(3rem, 7vw, 5.5rem) clamp(3rem, 7vw, 5rem); }
 @media (min-width: 62rem) { .hero { grid-template-columns: 1.55fr 1fr; gap: 4rem; } }
 
@@ -237,6 +238,8 @@ section:first-of-type { border-top: 0; }
 }
 
 .portrait {
+    /* figure carries a UA margin of 1em 40px, which pushed it past the gutter. */
+    margin: 0;
     position: relative;
     border: 1px solid var(--rule);
     background: var(--surface);
@@ -307,6 +310,7 @@ section:first-of-type { border-top: 0; }
 .case:first-of-type { border-top: 0; padding-top: 0; }
 
 .case-head { display: grid; gap: 1rem; align-items: start; }
+.case-head > * { min-width: 0; }
 @media (min-width: 56rem) { .case-head { grid-template-columns: 7rem 1fr; gap: 2.5rem; } }
 
 .case-idx {
@@ -328,6 +332,7 @@ section:first-of-type { border-top: 0; }
 }
 
 .grid-2 { display: grid; gap: 1.75rem; margin-top: 1.5rem; }
+.grid-2 > * { min-width: 0; }
 @media (min-width: 46rem) { .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem; } }
 
 .block h4 { margin-bottom: 0.5rem; }
@@ -350,7 +355,9 @@ section:first-of-type { border-top: 0; }
 }
 
 /* ── system chain ───────────────────────────────────────────────── */
-.chain-wrap { overflow-x: auto; padding-bottom: 0.5rem; margin-top: 1.5rem; }
+/* min-width:0 so the wide chain scrolls inside this box instead of widening
+   the grid track that holds it. */
+.chain-wrap { overflow-x: auto; min-width: 0; padding-bottom: 0.5rem; margin-top: 1.5rem; }
 .chain {
     display: flex;
     align-items: stretch;
