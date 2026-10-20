@@ -301,6 +301,35 @@ figure.plate figcaption { font-family: var(--mono); font-size: 0.625rem; letter-
 .two figure.plate { max-width: 14rem; }
 @media (min-width: 44rem) { .two { grid-template-columns: 1fr 12rem; gap: 2.25rem; } .two figure.plate { max-width: none; } }
 @media (min-width: 60rem) { .two { grid-template-columns: 1fr 15rem; gap: 3.5rem; } }
+/* About reads as a newspaper page: a lede set against the portrait, then the
+   body across the full width in two columns with a rule between them. */
+.about-top { display: grid; gap: 1.75rem; align-items: start; }
+.about-top > * { min-width: 0; }
+.about-top figure.plate { margin: 0; max-width: 13rem; }
+@media (min-width: 44rem) {
+    .about-top { grid-template-columns: 1fr 12rem; gap: 2.25rem; }
+    .about-top figure.plate { max-width: none; }
+}
+@media (min-width: 60rem) { .about-top { grid-template-columns: 1fr 15rem; gap: 3.5rem; } }
+.about-lede p { max-width: none; }
+.about-lede p:first-child {
+    font-family: var(--display); font-variation-settings: 'opsz' 40;
+    font-size: clamp(1.0625rem, 1.9vw, 1.375rem); line-height: 1.4;
+    letter-spacing: -0.012em; color: var(--ink);
+}
+.about-cols { margin-top: 2.25rem; padding-top: 1.75rem; border-top: 1px solid var(--ink); }
+.about-cols p { max-width: none; orphans: 2; widows: 2; }
+.about-cols h3 {
+    font-size: 1.0625rem; letter-spacing: 0; margin: 1.75rem 0 0.6rem;
+    padding-top: 0.75rem; border-top: 1px solid var(--rule);
+    break-after: avoid; break-inside: avoid;
+}
+.about-cols > h3:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+@media (min-width: 52rem) {
+    .about-cols { column-count: 2; column-gap: 3rem; column-rule: 1px solid var(--rule); }
+}
+@media (min-width: 72rem) { .about-cols { column-gap: 4rem; } }
+
 .skills { display: grid; gap: 0; border-top: 1px solid var(--rule); margin-top: 2rem; }
 @media (min-width: 44rem) { .skills { grid-template-columns: repeat(2, 1fr); } }
 .skill { padding: 1.1rem 1.25rem 1.1rem 0; border-bottom: 1px solid var(--rule); }
@@ -917,71 +946,76 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
     <div class="page view-in">
         <p class="kicker">About</p>
         <h2 style="margin-bottom:1.25rem">Korede Oluwabusuyi Joshua</h2>
-        <div class="two">
-            <div>
+
+        <div class="about-top">
+            <div class="about-lede">
                 <p>
                     I am a Senior Product Manager and Technical Product Manager, based in
                     Lagos and working with teams in the United States and Europe. For five
                     years I have owned products where the business consequence is immediate
-                    — if the wallet is wrong, a vendor is not paid; if supply is not visible,
-                    a retailer buys elsewhere; if a release is late, a distributed team
-                    loses a month.
-                </p>
-
-                <h3 style="margin:1.75rem 0 0.75rem">What I have built</h3>
-                <p>
-                    At Obana.Africa I own product across a B2B commerce platform: vendors
-                    onboarding and listing their catalogue, buyers discovering supply they
-                    can actually get, custom sourcing for what nobody has listed, orders
-                    moving through logistics and multiple locations, and the money settling
-                    behind all of it. I defined the product strategy for the wallet systems
-                    and embedded finance, and we built the payment infrastructure from
-                    scratch. Alongside it, Thaja — where a business opens an online store
-                    and runs a point of sale over the same stock.
-                </p>
-                <p>
-                    Before that: bulk ordering and ERP integrations for 50+ wholesale
-                    clients at Fazsion; roadmap and prioritisation across ten remote
-                    stakeholders at Iotech Extra; an investor-ready MVP at Bizinc; and eight
-                    SaaS releases across three time zones at AppCake. Alongside those,
-                    independent product consulting for brands that needed a product person
-                    rather than a product team.
-                </p>
-
-                <h3 style="margin:1.75rem 0 0.75rem">What changed</h3>
-                <p>
-                    Transaction completion up 60%. Sales response time from hours to under
-                    five minutes. Order processing down 25%, repeat B2B purchases up 15%.
-                    Six weeks of build avoided by deciding what not to make. Releases 35%
-                    faster at 99.9% reliability, with post-release bugs down 35%.
-                </p>
-
-                <h3 style="margin:1.75rem 0 0.75rem">How I have grown</h3>
-                <p>
-                    I started by delivering other people's roadmaps and moved to owning the
-                    systems underneath them — from a single product surface to a commerce
-                    platform with supply, logistics and money moving through it. The step up
-                    to Senior Product Manager came with the parts of the business nobody
-                    wants to get wrong: what a buyer can actually source, and what a vendor
-                    is actually owed.
+                    — if the wallet is wrong, a vendor is not paid; if supply is not
+                    visible, a retailer buys elsewhere; if a release is late, a distributed
+                    team loses a month.
                 </p>
                 <p>
                     Most of my work has been in African B2B commerce, where the constraints
                     are real — fragmented supply, uneven logistics, payment friction,
-                    businesses digitising for the first time. You cannot design around those
-                    with a better screen. You have to understand the operation.
-                </p>
-                <p>
-                    I work closely with engineers. I read the API, reproduce the bug, and
-                    bring a case rather than an opinion. I would rather cut a feature than
-                    ship one nobody asked for, and I would rather hear a constraint early
-                    than be protected from it.
+                    businesses digitising for the first time. You cannot design around
+                    those with a better screen. You have to understand the operation.
                 </p>
             </div>
-            <figure class="plate" style="margin:0; align-self:start">
+            <figure class="plate">
                 <img src="portrait-formal.jpg" alt="Korede Oluwabusuyi Joshua" width="675" height="900" loading="lazy">
                 <figcaption>Korede Oluwabusuyi Joshua — Lagos</figcaption>
             </figure>
+        </div>
+
+        <div class="about-cols">
+            <h3>What I have built</h3>
+            <p>
+                At Obana.Africa I own product across a B2B commerce platform: vendors
+                onboarding and listing their catalogue, buyers discovering supply they can
+                actually get, custom sourcing for what nobody has listed, orders moving
+                through logistics and multiple locations, and the money settling behind
+                all of it. I defined the product strategy for the wallet systems and
+                embedded finance, and we built the payment infrastructure from scratch.
+                Alongside it, Thaja — where a business opens an online store and runs a
+                point of sale over the same stock.
+            </p>
+            <p>
+                Before that: bulk ordering and ERP integrations for 50+ wholesale clients
+                at Fazsion; roadmap and prioritisation across ten remote stakeholders at
+                Iotech Extra; an investor-ready MVP at Bizinc; and eight SaaS releases
+                across three time zones at AppCake. Alongside those, independent product
+                consulting for brands that needed a product person rather than a product
+                team.
+            </p>
+
+            <h3>What changed</h3>
+            <p>
+                Transaction completion up 60%. Sales response time from hours to under
+                five minutes. Order processing down 25%, repeat B2B purchases up 15%. Six
+                weeks of build avoided by deciding what not to make. Releases 35% faster
+                at 99.9% reliability, with post-release bugs down 35%.
+            </p>
+
+            <h3>How I have grown</h3>
+            <p>
+                I started by delivering other people’s roadmaps and moved to owning the
+                systems underneath them — from a single product surface to a commerce
+                platform with supply, logistics and money moving through it. The step up
+                to Senior Product Manager came with the parts of the business nobody wants
+                to get wrong: what a buyer can actually source, and what a vendor is
+                actually owed.
+            </p>
+
+            <h3>How I work</h3>
+            <p>
+                I work closely with engineers. I read the API, reproduce the bug, and
+                bring a case rather than an opinion. I would rather cut a feature than
+                ship one nobody asked for, and I would rather hear a constraint early than
+                be protected from it.
+            </p>
         </div>
     </div>
 </section>
