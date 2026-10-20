@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
 <title>Korede Busuyi — Senior Product Manager</title>
-<meta name="description" content="Senior Product Manager in Lagos. Wallets and embedded finance at Obana.Africa, wholesale operations at Fazsion, SaaS delivery at AppCake. Five roles and what changed in each.">
+<meta name="description" content="Senior Product Manager and Technical Product Manager building commerce, SaaS, logistics and payments — Obana.Africa and Thaja in Lagos, earlier product work with teams in the United States and Europe.">
 <meta name="author" content="Korede Oluwabusuyi Joshua">
 <meta name="theme-color" content="#E7E7E3" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#121314" media="(prefers-color-scheme: dark)">
@@ -139,11 +139,15 @@ main { flex: 1; }
 .hero > * { min-width: 0; }
 /* Side by side from tablet up. Stacked, the portrait is capped so it never
    takes a whole screen before anyone reaches the work. */
-@media (min-width: 40rem) { .hero { grid-template-columns: 1fr 11rem; gap: 2.25rem; } }
-@media (min-width: 56rem) { .hero { grid-template-columns: 1fr 14rem; gap: 3.5rem; } }
-@media (min-width: 68rem) { .hero { grid-template-columns: 1fr 16rem; } }
-.hero h1 { margin-bottom: 1.25rem; }
-.hero .stand { font-size: clamp(1rem, 1.7vw, 1.125rem); color: var(--soft); max-width: 31rem; }
+@media (min-width: 40rem) {
+    .hero { grid-template-columns: 1fr 12rem; gap: 1.5rem 2.25rem; align-items: end; }
+}
+@media (min-width: 56rem) { .hero { grid-template-columns: 1fr 17rem; gap: 1.75rem 3.5rem; } }
+@media (min-width: 68rem) { .hero { grid-template-columns: 1fr 18rem; } }
+/* Sized to the text column, not the window, so the three lines hold their
+   shape instead of wrapping into a ragged fourth. */
+.hero h1 { margin-bottom: 1.25rem; font-size: clamp(2.125rem, 4.4vw, 3.75rem); }
+.hero .stand { font-size: clamp(1rem, 1.7vw, 1.125rem); color: var(--soft); max-width: 34rem; }
 .hero-text { display: flex; flex-direction: column; }
 .hero-name {
     font-family: var(--display); font-variation-settings: 'opsz' 40;
@@ -152,11 +156,23 @@ main { flex: 1; }
 }
 .hero-role {
     font-family: var(--mono); font-size: 0.6875rem; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--mark);
-    margin: 0 0 1.5rem; padding-bottom: 1.1rem; border-bottom: 1px solid var(--rule);
-    max-width: 30rem;
+    text-transform: uppercase; color: var(--mark); max-width: none;
+    margin: 0; padding-bottom: 1.1rem; border-bottom: 1px solid var(--rule);
 }
-.hero-acts { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 1.75rem; }
+.hero-top { grid-column: 1 / -1; }
+.hero-acts { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 1.5rem; }
+
+/* The four surfaces, named once. Shares the text column's left edge and gives
+   it a bottom rule, so the block reads as one aligned object. */
+.hero-surf {
+    list-style: none; margin: 1.5rem 0 0; padding: 0.85rem 0 0;
+    border-top: 1px solid var(--rule);
+    display: flex; flex-wrap: wrap; gap: 0.35rem 0.9rem;
+    font-family: var(--mono); font-size: 0.625rem; letter-spacing: 0.11em;
+    text-transform: uppercase; color: var(--soft);
+}
+.hero-surf li { display: flex; align-items: center; gap: 0.9rem; }
+.hero-surf li + li::before { content: ''; width: 3px; height: 3px; background: var(--mark); flex: none; }
 
 .hero figure { margin: 0; border: 1px solid var(--rule); max-width: 11rem; }
 .hero figure figcaption {
@@ -337,15 +353,23 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
 <section class="view" id="v-home" aria-label="Home">
     <div class="page view-in">
         <div class="hero">
-            <div class="hero-text">
+            <div class="hero-top">
                 <p class="hero-name">Korede Oluwabusuyi Joshua</p>
                 <p class="hero-role">Senior Product Manager · Technical Product Manager</p>
-                <h1>Commerce systems,<br>and the things that<br><em>actually changed.</em></h1>
+            </div>
+            <div class="hero-text">
+                <h1>I build products<br>that make businesses<br><em>work better.</em></h1>
                 <p class="stand">
-                    Five years building B2B commerce in Lagos — marketplaces, sourcing,
-                    wallets and the operations underneath them. I am the person
-                    accountable for whether a product moves a number.
+                    Commerce, SaaS, logistics and payments — across Africa and with global
+                    teams. I work across strategy, execution, technology and operations,
+                    turning business problems into products that move real numbers.
                 </p>
+                <ul class="hero-surf">
+                    <li>Marketplace &amp; sourcing</li>
+                    <li>Sales partners</li>
+                    <li>Logistics</li>
+                    <li>Online store &amp; POS</li>
+                </ul>
                 <div class="hero-acts">
                     <a class="act solid" href="#/record">See the record</a>
                     <a class="act" href="https://wa.me/2347035599433" target="_blank" rel="noopener">WhatsApp</a>
@@ -354,7 +378,7 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
             </div>
             <figure>
                 <img src="portrait.jpg" alt="Korede Oluwabusuyi Joshua" width="1006" height="1200">
-                <figcaption>Lagos, Nigeria</figcaption>
+                <figcaption>Lagos · Remote</figcaption>
             </figure>
         </div>
 
@@ -377,24 +401,24 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
         </div>
         <div class="areas">
             <a class="area" href="#/obana">
-                <span class="area-k">Supply</span>
+                <span class="area-k">Marketplace</span>
                 <span class="area-t">Sourcing &amp; vendors</span>
-                <span class="area-d">Vendor onboarding and listings, variants, MOQ, product discovery and custom sourcing for what nobody has listed yet.</span>
+                <span class="area-d">Vendor onboarding and listings, variants, MOQ, discovery, and custom sourcing for what nobody has listed yet — the supply side of moving product.</span>
             </a>
             <a class="area" href="#/obana">
-                <span class="area-k">Money</span>
-                <span class="area-t">Wallets &amp; payments</span>
-                <span class="area-d">Balances, commissions, withdrawals and inventory financing — the transaction states behind them, built from scratch.</span>
+                <span class="area-k">Distribution</span>
+                <span class="area-t">Sales partners &amp; finance</span>
+                <span class="area-d">A partner network that sells on behalf of the platform, with commissions, wallets, withdrawals and inventory financing behind it.</span>
+            </a>
+            <a class="area" href="#/obana">
+                <span class="area-k">Logistics</span>
+                <span class="area-t">A delivery app of its own</span>
+                <span class="area-d">Obana Logistics is a standalone product — delivery requests, pricing, pickup and door delivery, and the keys that connect it to a shop.</span>
             </a>
             <a class="area" href="#/thaja">
-                <span class="area-k">Merchants</span>
-                <span class="area-t">POS &amp; storefront</span>
-                <span class="area-d">One stock figure across a counter and an online store, with locations, orders, payments and delivery.</span>
-            </a>
-            <a class="area" href="#/fazsion">
-                <span class="area-k">Operations</span>
-                <span class="area-t">Orders &amp; logistics</span>
-                <span class="area-d">Bulk ordering, ERP integrations, fulfilment, multiple locations, and the funnel work that makes buyers return.</span>
+                <span class="area-k">SaaS</span>
+                <span class="area-t">Online store &amp; POS</span>
+                <span class="area-d">Thaja: a business opens its own online store and runs a point of sale over one stock figure, across locations.</span>
             </a>
         </div>
 
@@ -404,7 +428,7 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
         </div>
         <p class="lead" style="margin:0 0 0.5rem">
             Open to senior product roles — commerce, marketplaces, SaaS, payments and the
-            operational systems underneath them. Remote, or Lagos-based.
+            operational systems underneath them. Remote worldwide, or Lagos-based.
         </p>
         <div class="ways">
             <a class="way" href="https://wa.me/2347035599433" target="_blank" rel="noopener">
@@ -691,8 +715,16 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
                 </div>
 
                 <figure class="plate">
-                    <img src="shot-storefront.jpg" alt="A Thaja storefront running online" width="1500" height="964" loading="lazy">
-                    <figcaption>A Thaja storefront, live</figcaption>
+                    <img src="thaja-store.jpg" alt="Thaja online store settings showing a live storefront on its own domain" width="1500" height="760" loading="lazy">
+                    <figcaption>Online store — a merchant publishes a storefront on its own domain, from the same catalogue</figcaption>
+                </figure>
+                <figure class="plate">
+                    <img src="thaja-pos.jpg" alt="Thaja point of sale screen with terminals, staff, locations and register settings" width="1500" height="937" loading="lazy">
+                    <figcaption>Point of sale — terminals, staff, locations and register settings, with the register launched from here</figcaption>
+                </figure>
+                <figure class="plate">
+                    <img src="thaja-inventory.jpg" alt="Thaja inventory screen showing stock per location and low-stock thresholds" width="1500" height="536" loading="lazy">
+                    <figcaption>Inventory — one stock figure per location, which the counter and the storefront both sell against</figcaption>
                 </figure>
 
                 <div class="pager"><a href="#/obana">← Obana.Africa</a><a href="#/fazsion">Fazsion Wholesale →</a></div>
@@ -888,10 +920,12 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
         <div class="two">
             <div>
                 <p>
-                    I am a Senior Product Manager in Lagos. For five years I have owned
-                    products where the business consequence is immediate — if the wallet is
-                    wrong, a vendor is not paid; if supply is not visible, a retailer buys
-                    elsewhere; if a release is late, a distributed team loses a month.
+                    I am a Senior Product Manager and Technical Product Manager, based in
+                    Lagos and working with teams in the United States and Europe. For five
+                    years I have owned products where the business consequence is immediate
+                    — if the wallet is wrong, a vendor is not paid; if supply is not visible,
+                    a retailer buys elsewhere; if a release is late, a distributed team
+                    loses a month.
                 </p>
 
                 <h3 style="margin:1.75rem 0 0.75rem">What I have built</h3>
@@ -1039,7 +1073,7 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
         <h2 style="margin-bottom:1rem">Let's talk.</h2>
         <p class="lead">
             Open to senior product roles — commerce, marketplaces, SaaS, payments and the
-            operational systems underneath them. Remote, or Lagos-based.
+            operational systems underneath them. Remote worldwide, or Lagos-based.
         </p>
 
         <div class="ways">
@@ -1080,7 +1114,7 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
 <footer>
     <div class="page foot">
         <span>Korede Oluwabusuyi Joshua</span>
-        <span>Senior Product Manager · Lagos</span>
+        <span>Senior &amp; Technical Product Manager · Lagos &amp; remote</span>
     </div>
 </footer>
 
