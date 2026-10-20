@@ -171,7 +171,8 @@ main { flex: 1; }
 .row-name { display: block; font-family: var(--display); font-variation-settings: 'opsz' 40; font-weight: 600; font-size: 1.0625rem; letter-spacing: -0.015em; line-height: 1.25; }
 .row-sub { display: block; font-size: 0.8125rem; color: var(--soft); margin-top: 0.15rem; }
 .row-end { display: flex; align-items: center; gap: 0.9rem; }
-.row-num { font-family: var(--display); font-variation-settings: 'opsz' 100; font-weight: 700; font-size: 1.25rem; letter-spacing: -0.03em; color: var(--mark); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.row-focus { display: none; font-family: var(--mono); font-size: 0.6875rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--soft); text-align: right; }
+@media (min-width: 44rem) { .row-focus { display: block; } }
 .row-go { font-family: var(--mono); font-size: 0.875rem; color: var(--soft); transition: transform 0.15s ease, color 0.15s ease; }
 
 /* ── role view ──────────────────────────────────────────────────── */
@@ -180,7 +181,8 @@ main { flex: 1; }
 
 .role-grid { display: grid; gap: 1.75rem; }
 .role-grid > * { min-width: 0; }
-@media (min-width: 56rem) { .role-grid { grid-template-columns: 10.5rem 1fr; gap: 3rem; } }
+@media (min-width: 56rem) { .role-grid { grid-template-columns: 10.5rem minmax(0, 1fr); gap: 3rem; } }
+.role-grid figure.plate { max-width: 44rem; }
 .rail { display: grid; gap: 0.85rem; align-content: start; }
 .rail div { display: grid; gap: 0.1rem; }
 .rail .k { font-family: var(--mono); font-size: 0.625rem; letter-spacing: 0.11em; text-transform: uppercase; color: var(--soft); }
@@ -359,6 +361,15 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
                         <li><em>—</em>Major releases shipped with zero critical downtime</li>
                     </ul>
                 </div>
+                <figure class="plate">
+                    <img src="shot-marketplace.jpg" alt="Obana marketplace listing grid showing vendors, variants and B2B price gating" width="1500" height="964" loading="lazy">
+                    <figcaption>Obana marketplace — vendor listings, variants, MOQ and B2B price gating</figcaption>
+                </figure>
+                <figure class="plate">
+                    <img src="shot-partner.jpg" alt="Obana sales partner programme page describing commissions credited to a wallet" width="1500" height="964" loading="lazy">
+                    <figcaption>Sales partner programme — every sale credits a commission to a wallet</figcaption>
+                </figure>
+
                 <div class="pager"><span></span><a href="#/fazsion">Fazsion Wholesale →</a></div>
             </div>
         </div>
@@ -749,13 +760,15 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
 
 <script>
 (function () {
+    /* What the role was about, not a bare number. A "6 wks" sitting beside a
+       company name reads as nothing until you have opened the page. */
     var ROLES = [
-        { id: 'obana',   no: '01', name: 'Obana.Africa',     sub: 'Senior Product Manager · 2025 — now',   num: '60%'   },
-        { id: 'fazsion', no: '02', name: 'Fazsion Wholesale', sub: 'Product Manager · 2023 — 2025',        num: '25%'   },
-        { id: 'iotech',  no: '03', name: 'Iotech Extra',      sub: 'Product Manager · 2023 — 2024',        num: '6 wks' },
-        { id: 'bizinc',  no: '04', name: 'Bizinc',            sub: 'Product Manager, Contract · 2023 — 2024', num: '3 wks' },
-        { id: 'appcake', no: '05', name: 'AppCake',           sub: 'Product Manager · 2021 — 2023',        num: '99.9%' },
-        { id: 'earlier', no: '06', name: 'Earlier work',      sub: 'TheOutlet.ng · davidwej.com',          num: ''      }
+        { id: 'obana',   no: '01', name: 'Obana.Africa',      sub: 'Senior Product Manager · 2025 — now',     focus: 'Wallets, payments, commissions' },
+        { id: 'fazsion', no: '02', name: 'Fazsion Wholesale', sub: 'Product Manager · 2023 — 2025',           focus: 'Bulk ordering, ERP' },
+        { id: 'iotech',  no: '03', name: 'Iotech Extra',      sub: 'Product Manager · 2023 — 2024',           focus: 'Prioritisation, analytics' },
+        { id: 'bizinc',  no: '04', name: 'Bizinc',            sub: 'Product Manager, Contract · 2023 — 2024', focus: 'Discovery, MVP' },
+        { id: 'appcake', no: '05', name: 'AppCake',           sub: 'Product Manager · 2021 — 2023',           focus: 'SaaS delivery, QA' },
+        { id: 'earlier', no: '06', name: 'Earlier work',      sub: 'TheOutlet.ng · davidwej.com',             focus: 'Marketplace, retail' }
     ];
 
     function rowHtml(r) {
@@ -763,7 +776,7 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
             '<span class="row-no">' + r.no + '</span>' +
             '<span class="row-main"><span class="row-name">' + r.name + '</span>' +
             '<span class="row-sub">' + r.sub + '</span></span>' +
-            '<span class="row-end">' + (r.num ? '<span class="row-num">' + r.num + '</span>' : '') +
+            '<span class="row-end"><span class="row-focus">' + r.focus + '</span>' +
             '<span class="row-go">→</span></span></a>';
     }
 
