@@ -175,6 +175,25 @@ main { flex: 1; }
 @media (min-width: 44rem) { .row-focus { display: block; } }
 .row-go { font-family: var(--mono); font-size: 0.875rem; color: var(--soft); transition: transform 0.15s ease, color 0.15s ease; }
 
+/* ── home: areas + closer ───────────────────────────────────────── */
+.areas { display: grid; gap: 0; border-top: 1px solid var(--rule); }
+@media (min-width: 44rem) { .areas { grid-template-columns: repeat(2, 1fr); } }
+.area { display: block; padding: 1.4rem 1.5rem 1.5rem 0; border-bottom: 1px solid var(--rule); text-decoration: none; color: inherit; }
+@media (min-width: 44rem) { .area:nth-child(odd) { padding-right: 2.25rem; border-right: 1px solid var(--rule); } .area:nth-child(even) { padding-left: 2.25rem; } }
+.area:hover { background: var(--raised); }
+.area:hover .area-t { color: var(--mark); }
+.area-k { display: block; font-family: var(--mono); font-size: 0.625rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mark); margin-bottom: 0.4rem; }
+.area-t { display: block; font-family: var(--display); font-variation-settings: 'opsz' 40; font-weight: 600; font-size: 1.125rem; letter-spacing: -0.015em; margin-bottom: 0.3rem; }
+.area-d { display: block; font-size: 0.875rem; color: var(--soft); max-width: 24rem; }
+
+.closer { margin-top: 3rem; padding-top: 1.75rem; border-top: 1px solid var(--ink); display: grid; gap: 1.5rem; }
+@media (min-width: 52rem) { .closer { grid-template-columns: 1fr auto; gap: 3rem; align-items: center; } }
+.closer-acts { display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; }
+.act { font-family: var(--mono); font-size: 0.6875rem; letter-spacing: 0.09em; text-transform: uppercase; text-decoration: none; border: 1px solid var(--rule); padding: 0.6rem 0.85rem; color: var(--ink); white-space: nowrap; }
+.act:hover { border-color: var(--mark); color: var(--mark); }
+.act.solid { background: var(--mark); color: var(--mark-ink); border-color: var(--mark); }
+.act.solid:hover { color: var(--mark-ink); opacity: 0.9; }
+
 /* ── role view ──────────────────────────────────────────────────── */
 .back { display: inline-flex; align-items: center; gap: 0.4rem; font-family: var(--mono); font-size: 0.6875rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--soft); text-decoration: none; margin-bottom: 1.75rem; }
 .back:hover { color: var(--mark); }
@@ -275,7 +294,7 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
         <div class="hero">
             <div>
                 <p class="kicker">Senior Product Manager — Lagos, Nigeria</p>
-                <h1>Five businesses.<br>Five things that<br><em>actually changed.</em></h1>
+                <h1>Commerce systems,<br>and the things that<br><em>actually changed.</em></h1>
                 <p class="stand">
                     I am the person accountable for whether a product moves a number.
                     Pick a role below and you will get the business, what I owned, and
@@ -299,6 +318,48 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
             <span class="kicker" style="margin:0">2021 — present</span>
         </div>
         <div class="rows" id="home-rows"></div>
+
+        <div class="index-head">
+            <h2>What I work on</h2>
+            <span class="kicker" style="margin:0">Four surfaces</span>
+        </div>
+        <div class="areas">
+            <a class="area" href="#/obana">
+                <span class="area-k">Supply</span>
+                <span class="area-t">Sourcing &amp; vendors</span>
+                <span class="area-d">Vendor onboarding and listings, variants, MOQ, product discovery and custom sourcing for what nobody has listed yet.</span>
+            </a>
+            <a class="area" href="#/obana">
+                <span class="area-k">Money</span>
+                <span class="area-t">Wallets &amp; payments</span>
+                <span class="area-d">Balances, commissions, withdrawals and the transaction states behind them — built from scratch, not bolted on.</span>
+            </a>
+            <a class="area" href="#/thaja">
+                <span class="area-k">Merchants</span>
+                <span class="area-t">POS &amp; storefront</span>
+                <span class="area-d">One stock figure across a counter and an online store, with locations, orders, payments and delivery.</span>
+            </a>
+            <a class="area" href="#/fazsion">
+                <span class="area-k">Operations</span>
+                <span class="area-t">Orders &amp; logistics</span>
+                <span class="area-d">Bulk ordering, ERP integrations, fulfilment, multiple locations, and the funnel work that makes buyers return.</span>
+            </a>
+        </div>
+
+        <div class="closer">
+            <div>
+                <h2 style="margin-bottom:0.75rem">Open to senior product roles.</h2>
+                <p class="lead" style="margin:0">
+                    Commerce, marketplaces, SaaS, payments and the operational systems
+                    underneath them. Remote, or Lagos-based.
+                </p>
+            </div>
+            <div class="closer-acts">
+                <a class="act solid" href="https://wa.me/2347035599433" target="_blank" rel="noopener">WhatsApp</a>
+                <a class="act" href="mailto:koredebusuyi.career@gmail.com">Email</a>
+                <a class="act" href="#/contact">All ways to reach me →</a>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -326,28 +387,40 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
             <div>
                 <h2 style="margin-bottom:0.75rem">Obana.Africa</h2>
                 <p class="lead">
-                    A B2B commerce business where vendors, sales partners and buyers all
-                    have to be paid correctly. I was brought in as the product owner for
-                    the money.
+                    A B2B commerce platform connecting African retailers to verified
+                    suppliers — sourcing, vendor listings, orders, logistics and the money
+                    that moves between them.
                 </p>
                 <p>
-                    There was no payment infrastructure to speak of. Vendors and sales
-                    partners both needed balances they could trust, commissions they could
-                    predict, and withdrawals that reached a real bank account. I defined
-                    the product strategy for the wallet systems and embedded finance, and
-                    we built the payment infrastructure from scratch rather than bolting
-                    it on.
+                    The business runs on supply. A retailer needs to find a product they
+                    can actually get, from a vendor they can trust, at a quantity that makes
+                    sense, delivered somewhere real. So most of the product work is about
+                    making supply visible and orderable: vendors onboarding and listing
+                    their catalogue, products carrying variants and minimum order
+                    quantities, buyers discovering what is in stock, and custom sourcing
+                    for the things nobody has listed yet.
                 </p>
                 <p>
-                    The commercial side had a different problem: it was losing deals to its
-                    own response time. Leads arrived and sat. I rebuilt how a lead is
-                    captured, routed and answered, so it reached a person while the buyer
-                    still cared.
+                    Once an order exists it has to move and it has to settle. Logistics,
+                    multiple locations and fulfilment on one side; on the other, balances
+                    vendors and sales partners can trust, commissions they can predict, and
+                    withdrawals that reach a real bank account. There was no payment
+                    infrastructure when I arrived — I defined the product strategy for the
+                    wallet systems and embedded finance, and we built it from scratch
+                    rather than bolting it on.
+                </p>
+                <p>
+                    The commercial side had its own problem: it was losing deals to its own
+                    response time. Leads arrived and sat. I rebuilt how a lead is captured,
+                    routed and answered, so it reached a person while the buyer still cared.
                 </p>
                 <ul class="owned">
+                    <li>Vendor onboarding, listings, product and variant workflows, MOQ and MOV</li>
+                    <li>Product discovery, categories and vendor visibility for buyers</li>
+                    <li>Custom sourcing for products not yet on the platform</li>
+                    <li>Orders, back orders, fulfilment, logistics and multiple locations</li>
                     <li>Product strategy for wallet systems and embedded finance</li>
-                    <li>Payment infrastructure, built from scratch</li>
-                    <li>Sales Partner App and Embedly API integration</li>
+                    <li>Payment infrastructure built from scratch; Sales Partner App and Embedly API</li>
                     <li>Lead capture, routing and response automation</li>
                     <li>QA across releases, working in GitHub, Vercel and Render</li>
                 </ul>
@@ -370,7 +443,64 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
                     <figcaption>Sales partner programme — every sale credits a commission to a wallet</figcaption>
                 </figure>
 
-                <div class="pager"><span></span><a href="#/fazsion">Fazsion Wholesale →</a></div>
+                <div class="pager"><span></span><a href="#/thaja">Thaja →</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="view" id="v-thaja" aria-label="Thaja">
+    <div class="page view-in">
+        <a class="back" href="#/record">← The record</a>
+        <div class="role-grid">
+            <aside class="rail">
+                <div><span class="k">No.</span><span class="v">02</span></div>
+                <div><span class="k">Product</span><span class="v">Commerce platform</span></div>
+                <div><span class="k">Period</span><span class="v">2025 — Present</span></div>
+                <div><span class="k">Place</span><span class="v">Lagos · Hybrid</span></div>
+            </aside>
+            <div>
+                <h2 style="margin-bottom:0.75rem">Thaja</h2>
+                <p class="lead">
+                    The platform a business uses to open an online store and run a point of
+                    sale over the same stock. Built alongside Obana and connected to it.
+                </p>
+                <p>
+                    A merchant sells over a counter and online, and expects one stock figure.
+                    That single expectation is the whole product: point of sale, storefront,
+                    inventory, locations, orders and payments have to behave as one system,
+                    or the merchant stops trusting any of it.
+                </p>
+                <p>
+                    Calling it a POS undersells the problem. The till is one surface onto a
+                    business-operations platform, and the decisions that matter are about
+                    synchronisation, location rules, and what a merchant sees when two
+                    surfaces disagree.
+                </p>
+
+                <ul class="owned">
+                    <li>Point of sale and online storefront over one inventory</li>
+                    <li>Multi-location stock, with collection and delivery per location</li>
+                    <li>Storefront creation, templates and custom domains</li>
+                    <li>Payment connection and delivery pricing at checkout</li>
+                    <li>The integration that lets an Obana partner run a Thaja shop</li>
+                </ul>
+
+                <div class="result">
+                    <div class="result-fig">One</div>
+                    <ul>
+                        <li><em>—</em>Stock figure across the counter and the storefront</li>
+                        <li><em>—</em>A merchant can open and sell before every integration is configured</li>
+                        <li><em>—</em>Orders reach the business whether or not delivery can be priced</li>
+                    </ul>
+                </div>
+
+                <figure class="plate">
+                    <img src="shot-storefront.jpg" alt="A Thaja storefront running online" width="1500" height="964" loading="lazy">
+                    <figcaption>A Thaja storefront, live</figcaption>
+                </figure>
+
+                <div class="pager"><a href="#/obana">← Obana.Africa</a><a href="#/fazsion">Fazsion Wholesale →</a></div>
             </div>
         </div>
     </div>
@@ -381,7 +511,7 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
         <a class="back" href="#/record">← The record</a>
         <div class="role-grid">
             <aside class="rail">
-                <div><span class="k">No.</span><span class="v">02</span></div>
+                <div><span class="k">No.</span><span class="v">03</span></div>
                 <div><span class="k">Role</span><span class="v">Product Manager</span></div>
                 <div><span class="k">Period</span><span class="v">Oct 2023 — Jan 2025</span></div>
                 <div><span class="k">Place</span><span class="v">Lagos · Hybrid</span></div>
@@ -422,7 +552,7 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
                     <img src="fazsion-team.jpg" alt="Product and operations working session at Fazsion, Lagos" width="1400" height="1050" loading="lazy">
                     <figcaption>Product and operations session — Fazsion, Lagos</figcaption>
                 </figure>
-                <div class="pager"><a href="#/obana">← Obana.Africa</a><a href="#/iotech">Iotech Extra →</a></div>
+                <div class="pager"><a href="#/thaja">← Thaja</a><a href="#/iotech">Iotech Extra →</a></div>
             </div>
         </div>
     </div>
@@ -433,7 +563,7 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
         <a class="back" href="#/record">← The record</a>
         <div class="role-grid">
             <aside class="rail">
-                <div><span class="k">No.</span><span class="v">03</span></div>
+                <div><span class="k">No.</span><span class="v">04</span></div>
                 <div><span class="k">Role</span><span class="v">Product Manager</span></div>
                 <div><span class="k">Period</span><span class="v">Dec 2023 — Oct 2024</span></div>
                 <div><span class="k">Place</span><span class="v">Remote · Lagos</span></div>
@@ -475,7 +605,7 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
         <a class="back" href="#/record">← The record</a>
         <div class="role-grid">
             <aside class="rail">
-                <div><span class="k">No.</span><span class="v">04</span></div>
+                <div><span class="k">No.</span><span class="v">05</span></div>
                 <div><span class="k">Role</span><span class="v">Product Manager, Contract</span></div>
                 <div><span class="k">Period</span><span class="v">Oct 2023 — Jan 2024</span></div>
                 <div><span class="k">Place</span><span class="v">United States · Remote</span></div>
@@ -518,7 +648,7 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
         <a class="back" href="#/record">← The record</a>
         <div class="role-grid">
             <aside class="rail">
-                <div><span class="k">No.</span><span class="v">05</span></div>
+                <div><span class="k">No.</span><span class="v">06</span></div>
                 <div><span class="k">Role</span><span class="v">Product Manager</span></div>
                 <div><span class="k">Period</span><span class="v">Jul 2021 — Jun 2023</span></div>
                 <div><span class="k">Place</span><span class="v">Ukraine · Remote</span></div>
@@ -549,36 +679,54 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
                         <li><em>↑</em>Customer satisfaction by 12 points</li>
                     </ul>
                 </div>
-                <div class="pager"><a href="#/bizinc">← Bizinc</a><a href="#/earlier">Earlier work →</a></div>
+                <div class="pager"><a href="#/bizinc">← Bizinc</a><a href="#/advisory">Product consulting →</a></div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="view" id="v-earlier" aria-label="Earlier work">
+<section class="view" id="v-advisory" aria-label="Product consulting">
     <div class="page view-in">
         <a class="back" href="#/record">← The record</a>
         <div class="role-grid">
             <aside class="rail">
-                <div><span class="k">No.</span><span class="v">06</span></div>
+                <div><span class="k">No.</span><span class="v">07</span></div>
+                <div><span class="k">Type</span><span class="v">Independent engagements</span></div>
                 <div><span class="k">Period</span><span class="v"><span class="flag">Verify dates</span></span></div>
             </aside>
             <div>
-                <h2 style="margin-bottom:0.75rem">Where commerce started</h2>
-                <p class="lead">TheOutlet.ng and davidwej.com.</p>
-                <p>
-                    <strong>TheOutlet.ng</strong> — a B2B wholesale marketplace connecting
-                    retailers to verified suppliers across fashion, beauty, furniture, baby
-                    products and lifestyle. My first exposure to the two-sided problem I
-                    have worked on ever since: supply that has to be trusted, demand that
-                    has to be convinced.
+                <h2 style="margin-bottom:0.75rem">Product consulting</h2>
+                <p class="lead">
+                    Businesses that needed a product person rather than a product team — to
+                    look at what they sell, who they sell it to, and whether the way it
+                    works actually serves either of them.
                 </p>
                 <p>
-                    <strong>davidwej.com</strong> — retail commerce across the UK and
-                    Nigeria, covering product experience, checkout, conversion and
-                    third-party retail integrations.
-                    <span class="flag">Verify role</span>
+                    These were real brands with real customers and no one whose job was the
+                    product. The work was the same each time: understand the business model,
+                    find where the customer's need and the company's workflow disagree, and
+                    redesign the path between them so the business can run it without me.
                 </p>
+
+                <h3 style="margin:1.75rem 0 0.5rem; font-size:1.0625rem">TheOutlet.ng</h3>
+                <p>
+                    A B2B wholesale marketplace connecting retailers to verified suppliers
+                    across fashion, beauty, furniture, baby products and lifestyle. Two
+                    sides with opposite incentives: supply that has to be trusted, demand
+                    that has to be convinced. The product questions were about discovery,
+                    trust and how a wholesale purchase actually gets made.
+                    <span class="flag">Verify scope</span>
+                </p>
+
+                <h3 style="margin:1.75rem 0 0.5rem; font-size:1.0625rem">davidwej.com</h3>
+                <p>
+                    Retail commerce across the UK and Nigeria — product experience,
+                    checkout, conversion and third-party retail integrations. A different
+                    customer, a different market, and the same discipline: find where
+                    people drop out, and fix the reason rather than the symptom.
+                    <span class="flag">Verify scope</span>
+                </p>
+
                 <div class="pager"><a href="#/appcake">← AppCake</a><a href="#/contact">Get in touch →</a></div>
             </div>
         </div>
@@ -589,26 +737,58 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
 <section class="view" id="v-about" aria-label="About">
     <div class="page view-in">
         <p class="kicker">About</p>
-        <h2 style="margin-bottom:1.25rem">How I got here.</h2>
+        <h2 style="margin-bottom:1.25rem">Korede Oluwabusuyi Joshua</h2>
         <div class="two">
             <div>
                 <p>
-                    I came into product through operations, which is why I think the way I
-                    do. When you have had to reconcile an order by hand, or explain to a
-                    vendor why their balance is wrong, you stop treating the back office as
-                    someone else's problem and start treating it as the product.
+                    I am a Senior Product Manager in Lagos. For five years I have owned
+                    products where the business consequence is immediate — if the wallet is
+                    wrong, a vendor is not paid; if supply is not visible, a retailer buys
+                    elsewhere; if a release is late, a distributed team loses a month.
+                </p>
+
+                <h3 style="margin:1.75rem 0 0.75rem">What I have built</h3>
+                <p>
+                    At Obana.Africa I own product across a B2B commerce platform: vendors
+                    onboarding and listing their catalogue, buyers discovering supply they
+                    can actually get, custom sourcing for what nobody has listed, orders
+                    moving through logistics and multiple locations, and the money settling
+                    behind all of it. I defined the product strategy for the wallet systems
+                    and embedded finance, and we built the payment infrastructure from
+                    scratch. Alongside it, Thaja — where a business opens an online store
+                    and runs a point of sale over the same stock.
                 </p>
                 <p>
-                    That took me from supporting delivery into owning harder systems:
-                    marketplaces with two sides and competing incentives, SaaS that has to
-                    behave the same over a counter and on a phone, and money movement where
-                    approximately right is the same as wrong.
+                    Before that: bulk ordering and ERP integrations for 50+ wholesale
+                    clients at Fazsion; roadmap and prioritisation across ten remote
+                    stakeholders at Iotech Extra; an investor-ready MVP at Bizinc; and eight
+                    SaaS releases across three time zones at AppCake. Alongside those,
+                    independent product consulting for brands that needed a product person
+                    rather than a product team.
+                </p>
+
+                <h3 style="margin:1.75rem 0 0.75rem">What changed</h3>
+                <p>
+                    Transaction completion up 60%. Sales response time from hours to under
+                    five minutes. Order processing down 25%, repeat B2B purchases up 15%.
+                    Six weeks of build avoided by deciding what not to make. Releases 35%
+                    faster at 99.9% reliability, with post-release bugs down 35%.
+                </p>
+
+                <h3 style="margin:1.75rem 0 0.75rem">How I have grown</h3>
+                <p>
+                    I started by delivering other people's roadmaps and moved to owning the
+                    systems underneath them — from a single product surface to a commerce
+                    platform with supply, logistics and money moving through it. The step up
+                    to Senior Product Manager came with the parts of the business nobody
+                    wants to get wrong: what a buyer can actually source, and what a vendor
+                    is actually owed.
                 </p>
                 <p>
-                    Most of my work has been in African B2B commerce. The constraints are
-                    real — fragmented supply, uneven logistics, payment friction, businesses
-                    digitising for the first time — and you cannot design around them with a
-                    better screen. You have to understand the operation.
+                    Most of my work has been in African B2B commerce, where the constraints
+                    are real — fragmented supply, uneven logistics, payment friction,
+                    businesses digitising for the first time. You cannot design around those
+                    with a better screen. You have to understand the operation.
                 </p>
                 <p>
                     I work closely with engineers. I read the API, reproduce the bug, and
@@ -618,11 +798,10 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
                 </p>
             </div>
             <figure class="plate" style="margin:0; align-self:start">
-                <img src="event.jpg" alt="Korede at a Lagos technology event" width="900" height="1200" loading="lazy">
-                <figcaption>Lagos technology circuit</figcaption>
+                <img src="portrait-formal.jpg" alt="Korede Oluwabusuyi Joshua" width="675" height="900" loading="lazy">
+                <figcaption>Korede Oluwabusuyi Joshua — Lagos</figcaption>
             </figure>
         </div>
-
     </div>
 </section>
 
@@ -763,12 +942,13 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
     /* What the role was about, not a bare number. A "6 wks" sitting beside a
        company name reads as nothing until you have opened the page. */
     var ROLES = [
-        { id: 'obana',   no: '01', name: 'Obana.Africa',      sub: 'Senior Product Manager · 2025 — now',     focus: 'Wallets, payments, commissions' },
-        { id: 'fazsion', no: '02', name: 'Fazsion Wholesale', sub: 'Product Manager · 2023 — 2025',           focus: 'Bulk ordering, ERP' },
-        { id: 'iotech',  no: '03', name: 'Iotech Extra',      sub: 'Product Manager · 2023 — 2024',           focus: 'Prioritisation, analytics' },
-        { id: 'bizinc',  no: '04', name: 'Bizinc',            sub: 'Product Manager, Contract · 2023 — 2024', focus: 'Discovery, MVP' },
-        { id: 'appcake', no: '05', name: 'AppCake',           sub: 'Product Manager · 2021 — 2023',           focus: 'SaaS delivery, QA' },
-        { id: 'earlier', no: '06', name: 'Earlier work',      sub: 'TheOutlet.ng · davidwej.com',             focus: 'Marketplace, retail' }
+        { id: 'obana',   no: '01', name: 'Obana.Africa',      sub: 'Senior Product Manager · 2025 — now',     focus: 'Sourcing, vendors, logistics' },
+        { id: 'thaja',   no: '02', name: 'Thaja',             sub: 'Commerce platform · 2025 — now',          focus: 'POS, storefront, inventory' },
+        { id: 'fazsion', no: '03', name: 'Fazsion Wholesale', sub: 'Product Manager · 2023 — 2025',           focus: 'Bulk ordering, ERP' },
+        { id: 'iotech',  no: '04', name: 'Iotech Extra',      sub: 'Product Manager · 2023 — 2024',           focus: 'Prioritisation, analytics' },
+        { id: 'bizinc',  no: '05', name: 'Bizinc',            sub: 'Product Manager, Contract · 2023 — 2024', focus: 'Discovery, MVP' },
+        { id: 'appcake', no: '06', name: 'AppCake',           sub: 'Product Manager · 2021 — 2023',           focus: 'SaaS delivery, QA' },
+        { id: 'advisory', no: '07', name: 'Product consulting', sub: 'TheOutlet.ng · davidwej.com',            focus: 'Independent engagements' }
     ];
 
     function rowHtml(r) {
