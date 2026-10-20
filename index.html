@@ -144,8 +144,27 @@ main { flex: 1; }
 @media (min-width: 68rem) { .hero { grid-template-columns: 1fr 16rem; } }
 .hero h1 { margin-bottom: 1.25rem; }
 .hero .stand { font-size: clamp(1rem, 1.7vw, 1.125rem); color: var(--soft); max-width: 31rem; }
+.hero-text { display: flex; flex-direction: column; }
+.hero-name {
+    font-family: var(--display); font-variation-settings: 'opsz' 40;
+    font-weight: 600; font-size: 1rem; letter-spacing: -0.012em;
+    margin: 0 0 0.15rem;
+}
+.hero-role {
+    font-family: var(--mono); font-size: 0.6875rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--mark);
+    margin: 0 0 1.5rem; padding-bottom: 1.1rem; border-bottom: 1px solid var(--rule);
+    max-width: 30rem;
+}
+.hero-acts { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 1.75rem; }
+
 .hero figure { margin: 0; border: 1px solid var(--rule); max-width: 11rem; }
-@media (min-width: 40rem) { .hero figure { max-width: none; margin-top: 0.4rem; } }
+.hero figure figcaption {
+    font-family: var(--mono); font-size: 0.5625rem; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--soft);
+    padding: 0.4rem 0.55rem; border-top: 1px solid var(--rule); text-align: center;
+}
+@media (min-width: 40rem) { .hero figure { max-width: none; } }
 /* No forced ratio and no crop: the photographs keep their own proportions. */
 .hero figure img { width: 100%; }
 
@@ -318,17 +337,24 @@ footer { border-top: 1px solid var(--rule); margin-top: auto; }
 <section class="view" id="v-home" aria-label="Home">
     <div class="page view-in">
         <div class="hero">
-            <div>
-                <p class="kicker">Senior Product Manager — Lagos, Nigeria</p>
+            <div class="hero-text">
+                <p class="hero-name">Korede Oluwabusuyi Joshua</p>
+                <p class="hero-role">Senior Product Manager · Technical Product Manager</p>
                 <h1>Commerce systems,<br>and the things that<br><em>actually changed.</em></h1>
                 <p class="stand">
-                    I am the person accountable for whether a product moves a number.
-                    Pick a role below and you will get the business, what I owned, and
-                    what was different afterwards.
+                    Five years building B2B commerce in Lagos — marketplaces, sourcing,
+                    wallets and the operations underneath them. I am the person
+                    accountable for whether a product moves a number.
                 </p>
+                <div class="hero-acts">
+                    <a class="act solid" href="#/record">See the record</a>
+                    <a class="act" href="https://wa.me/2347035599433" target="_blank" rel="noopener">WhatsApp</a>
+                    <a class="act" href="mailto:koredebusuyi.career@gmail.com">Email</a>
+                </div>
             </div>
             <figure>
                 <img src="portrait.jpg" alt="Korede Oluwabusuyi Joshua" width="1006" height="1200">
+                <figcaption>Lagos, Nigeria</figcaption>
             </figure>
         </div>
 
